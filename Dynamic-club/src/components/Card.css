@@ -1,0 +1,72 @@
+.card {
+  background-color: #12161d;
+  border: 2px solid #00E5FF;
+  border-radius: 12px;
+  padding: 25px 20px;
+  text-align: center;
+  box-shadow: 0 0 20px rgba(255, 30, 56, 0.15);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: space-between;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.card:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 0 25px rgba(255, 30, 56, 0.3);
+}
+
+.card-img {
+  width: 100%;
+  height: 160px;
+  object-fit: cover;
+  border-radius: 8px;
+  margin-bottom: 15px;
+}
+
+.card h3 {
+  color: white;
+  font-size: 1.2rem;
+  letter-spacing: 0.5px;
+  margin-bottom: 10px;
+}
+
+.card p {
+  color: #EAEAEA;
+  font-size: 0.88rem;
+  line-height: 1.4;
+  margin-bottom: 15px;
+}
+
+.card strong {
+  color: #00E5FF;
+  font-size: 1.1rem;
+  margin-bottom: 15px;
+  display: block;
+}
+
+.card button {
+  background: transparent;
+  border: 1px solid #00E5FF;
+  color: #00E5FF;
+  padding: 8px 24px;
+  border-radius: 4px;
+  font-size: 0.8rem;
+  font-weight: bold;
+  letter-spacing: 1px;
+  cursor: pointer;
+  transition: background 0.3s, color 0.3s;
+}
+
+.card button:hover {
+  background-color: #00E5FF;
+  color: #0b0d10;
+}
+
+.grid-cards {
+  display: grid;
+  /* Crea columnas automáticas que miden mínimo 260px y se expanden solas */
+  grid-template-columns: repeat(auto-fit, minmax(260px, 1fr)); 
+  gap: 25px; /* Espacio entre cada tarjeta */
+}

@@ -1,0 +1,29 @@
+.productos-container {
+  max-width: 1100px;
+  margin: 40px auto;
+  padding: 0 20px;
+}
+
+.productos-header {
+  text-align: center;
+  margin-bottom: 40px;
+}
+
+.productos-header h2 {
+  font-size: 2rem;
+  color: #2C3E50;
+  margin-bottom: 10px;
+  letter-spacing: 1px;
+}
+
+.productos-header p {
+  color: #ffffff;
+  font-size: 1rem;
+}
+
+
+.grid-cards {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+  gap: 30px;
+}
