@@ -3,6 +3,7 @@ import { useState } from "react";
 function Contacto() {
   const [nombre, setNombre] = useState("");
   const [correo, setCorreo] = useState("");
+  const [mensaje, setMensaje]= useState("");
 
   const handleSubmit = (e: React.FormEvent) => {
     e.preventDefault();
@@ -10,7 +11,9 @@ function Contacto() {
       alert("Por favor completa los campos requeridos.");
       return;
     }
-    alert(`¡Gracias ${nombre}! Nos pondremos en contacto contigo.`);
+    setMensaje(`¡Gracias ${nombre}! Nos pondremos en contacto contigo.`);
+        setNombre("");
+        setCorreo("");
   };
 
   return (
@@ -34,6 +37,9 @@ function Contacto() {
         />
         <button type="submit">Enviar Mensaje</button>
       </form>
+      {mensaje !== "" && (
+                <p>{mensaje}</p>
+            )}
     </section>
   );
 }
